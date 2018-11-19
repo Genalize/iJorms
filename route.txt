@@ -1,0 +1,27 @@
+After making the requirements clear, we can be sure that the sections that the candidate uses in the resume can be exhaustive to some extent.
+My guess is that we can look for a set of sections one by one. A possible approach would be:
+
+1. Create a list of all possible sections
+   eg: personal details|skills|training|work experience|education|qualification|references|... (I think this list can be made exhaustive)
+
+2. Now create the first level structure using the above sections. 
+   Search for above keys in the resume
+   The part of text included between two of them belongs to the first one
+   eg:
+
+     education\n\n\nBSC lorem ipsum....\nMSC ... ... \n\nskills\n\nDatabases worked for xyz for 2 years... \nMachine learning... ... \n
+    
+    For this text, we look for the first occurence of one of the keys, 'education' in this case, and go for another one, i.e. 'skills', 
+    so we can capture the part from 'education' before 'skills' under 'education'
+
+    The problem is, can we make the list exhaustive?
+
+3. Now that top level segmentation has been achieved, sub sections need to be captured.
+   Methods usable:
+   Regexes
+   NER
+   ...
+   For this, I think we need to create the skill taxonomy (or ontology). 
+
+
+

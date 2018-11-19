@@ -1,0 +1,2 @@
+class Boosting():
+    pass
